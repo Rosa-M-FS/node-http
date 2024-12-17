@@ -1,4 +1,4 @@
-const data=require('./data.js');
+const {data}=require('./data.js');
 
 const http = require('node:http');
 const server=http.createServer((req,res)=>{
@@ -29,6 +29,6 @@ const server=http.createServer((req,res)=>{
         </body>
         </html>`)
 });
-server.listen(3000,()=>{
-    console.log(`Server listening on port http://localhost${server.address().port}`)
+server.listen(0,()=>{
+    console.log(`Server listening on port http://localhost:${server.address().port}`)
 })
